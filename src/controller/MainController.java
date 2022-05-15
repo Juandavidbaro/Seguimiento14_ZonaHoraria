@@ -123,6 +123,22 @@ public class MainController implements Runnable {
 			}
 			String textSeg="",textMin="",textHora="";
 			textSeg+=segundoCronometro;
+			
+			if(segundoCronometro<10) {
+				textSeg="0"+segundoCronometro;
+			}else {
+				textSeg=""+segundoCronometro;
+			}
+			if(minutoCronometro<10) {
+				textSeg="0"+minutoCronometro;
+			}else {
+				textMin=""+minutoCronometro;
+			}
+			if(horaCronometro<10) {
+				textHora="0"+horaCronometro;
+			}else {
+				textSeg=""+horaCronometro;
+			}
 			String reloj=textHora+" : "+ textMin+" : "+textSeg;
 			
 			cronometro.setText(reloj);
